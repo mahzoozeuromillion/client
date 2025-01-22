@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lilita+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patua+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Lilita+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patua+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); */
+/* @import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Lilita+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Patua+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("/src/assets/QuartzoBold-W9lv.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FooterFont";
+  src: url("/src/assets/Roboto_Condensed-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ModalFont";
+  src: url("/src/assets/MonaSans-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font-primary: "Anton", sans-serif;
+  --font-secondary: "Anton", sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-white text-n-1 text-base tracking-wide; /* Global letter spacing */
+    font-family: var(--font-primary);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-wider; /* Letter spacing for headings */
+  }
+
+  p {
+    @apply tracking-wide; /* Letter spacing for paragraphs */
+  }
+}
+
+/* Scrollbar Styles */
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(45deg, #f3ff50, #3f50d3);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(45deg, #e7d8f5, #dcdcdc);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-image: linear-gradient(45deg, #f3e7ff, #f3f3f3);
+}
+
+/* Button Styles */
+button {
+  background: var(--accent-color);
+  border-radius: var(--radius);
+  color: white;
+  border: 0;
+  padding: 12px 16px;
+  margin-top: 16px;
+  font-weight: 600;
+  font-family: var(--font-secondary);
+  letter-spacing: 0.05em; /* Increased letter spacing for buttons */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: block;
+}
+
+button:hover {
+  filter: contrast(115%);
+}
+
+button:active {
+  transform: translateY(0px) scale(0.98);
+  filter: brightness(0.9);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Form Element Styles */
+input,
+select {
+  display: block;
+  font-size: 1.1em;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #efefef;
+  letter-spacing: 0.02em; /* Add letter spacing for form inputs and selects */
+}
+
+label {
+  display: block;
+  letter-spacing: 0.03em; /* Letter spacing for form labels */
+}
+
+a {
+  color: var(--accent-color);
+  font-weight: 700;
+  letter-spacing: 0.03em; /* Add letter spacing for links */
+}
+
+/* Payment Form Styles */
+#payment-form {
+  border: #f6f9fc solid 1px;
+  border-radius: var(--radius);
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 30px 50px -20px rgb(50 50 93 / 25%),
+    0 30px 60px -30px rgb(0 0 0 / 30%);
+  letter-spacing: 0.02em; /* Add letter spacing for the form text */
+}
+
+#messages {
+  font-family: var(--font-primary);
+  display: none;
+  background-color: #0a253c;
+  color: #00d924;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: var(--radius);
+  font-size: 0.7em;
+  letter-spacing: 0.04em; /* Add letter spacing for messages */
+}
+
+/* Footer Styles */
+footer {
+  font-family: var(--font-primary);
+  letter-spacing: 0.03em; /* Add letter spacing for the footer */
+}
+
+/* Header Styles */
+header {
+  font-family: var(--font-primary);
+  letter-spacing: 0.03em; /* Add letter spacing for the header */
+}
