@@ -15,7 +15,7 @@ const HomePageImage = () => {
   return (
     <div className="flex items-center">
       <img
-        src="public/Mahzooz3.png"
+        src="/Mahzooz3.png"
         alt="Mahzooz"
         className={
           isScrolled
