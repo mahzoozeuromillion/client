@@ -16,11 +16,6 @@ const staticBannerData = [
     title: "Welcome to Our Store",
     heading: "Shop the Best Products Here",
     desc: "Find the latest deals and offers on our wide range of products.",
-    button: {
-      text: "Shop Now",
-      link: "/shop",
-    },
-    RedirectLink: "/shop",
     bannerText: "€10 MILLION UP FOR GRABS! YOUR WINNING TICKET AWAITS!",
   },
 ];
