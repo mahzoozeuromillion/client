@@ -129,7 +129,11 @@ const Header = () => {
             <Link
               to="/signup"
               className={`button font-extralight hidden mr-8 transition-colors  ${
-                isRootPath ? (scrolled ? "text-black" : "text-white") : "text-black"
+                isRootPath
+                  ? scrolled
+                    ? "text-black"
+                    : "text-white"
+                  : "text-black"
               } hover:text-[#0078F5] lg:block`}
               style={{
                 fontFamily: "footerFont, sans-serif",
