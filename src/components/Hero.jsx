@@ -1,4 +1,4 @@
-import { curve, heroBackground, robot } from "../assets";
+import { curve } from "../assets";
 import Button from "./Button";
 
 import { useRef } from "react";

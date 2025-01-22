@@ -10,7 +10,7 @@ const staticBannerData = [
     id: 3,
     ImageOrVideo: {
       mime: "image/jpeg",
-      url: "/public/bro.jpg",
+      url: "/bro.jpg",
       alternativeText: "Banner 3",
     },
     title: "Welcome to Our Store",
