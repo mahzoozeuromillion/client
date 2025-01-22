@@ -1,18 +1,16 @@
-import React, { useState, useRef } from "react";
+import  { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Section from "./Section";
-import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 
 const staticBannerData = [
   {
     id: 3,
     ImageOrVideo: {
       mime: "image/jpeg",
-      url: "/src/assets/bro.png",
+      url: "/src/assets/bro.jpg",
       alternativeText: "Banner 3",
     },
     title: "Welcome to Our Store",

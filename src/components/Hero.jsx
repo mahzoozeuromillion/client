@@ -1,24 +1,13 @@
 import { curve, heroBackground, robot } from "../assets";
 import Button from "./Button";
-import Section from "./Section";
-import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
-import { heroIcons } from "../constants";
-import { ScrollParallax } from "react-just-parallax";
+
 import { useRef } from "react";
-import Generating from "./Generating";
-import Notification from "./Notification";
-import CompanyLogos from "./CompanyLogos";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
 
   return (
-    <div
-      className="p-2 relative md:mt-8 overflow-hidden"
-      crosses
-      customPaddings
-      id="hero"
-    >
+    <div className="p-2 relative md:mt-8 overflow-hidden" id="hero">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-300/20 to-white" />
 
       <div className="container relative" ref={parallaxRef}>
@@ -43,8 +32,7 @@ const Hero = () => {
           >
             Play Now
           </Button>
-          <div className="space-y-4">
-          </div>
+          <div className="space-y-4"></div>
         </div>
       </div>
     </div>
