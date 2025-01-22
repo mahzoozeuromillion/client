@@ -15,7 +15,7 @@ const HomePageImage = () => {
   return (
     <div className="flex items-center">
       <img
-        src="/src/assets/Mahzooz3.png"
+        src="public/Mahzooz3.png"
         alt="Mahzooz"
         className={
           isScrolled
@@ -30,7 +30,7 @@ const HomePageImage = () => {
 const OtherPageImage = () => (
   <div className="flex items-center">
     <img
-      src="/src/assets/Mahzooz2.png"
+      src="public/Mahzooz3.png"
       alt="Mahzooz"
       className="h-20 w-20 object-contain"
     />

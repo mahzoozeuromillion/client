@@ -1,7 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { navigation } from "../constants";
-import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState, useEffect } from "react";
@@ -11,6 +10,7 @@ import { useCart } from "../context/CartContext";
 import GradientTitle from "./GradientTitle";
 import { useUser } from "../context/UserContext";
 import { IoExitOutline } from "react-icons/io5";
+import { Button } from "./ui/button";
 
 const Header = () => {
   const { items } = useCart();
@@ -19,7 +19,6 @@ const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Check if the current pathname is the root path
   const isRootPath = location.pathname === "/";
 
   useEffect(() => {
@@ -71,9 +70,9 @@ const Header = () => {
         </Link>
 
         <nav
-          className={`${
-            openNavigation ? "flex" : "hidden"
-          } fixed top-[5rem] left-0 right-0 bottom-0 bg-white/95 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
+          className={`${openNavigation ? "flex" : "hidden"} fixed ${
+            scrolled ? "top-[6rem]" : "top-[8rem]"
+          } left-0 right-0 bottom-0 bg-white/95 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
           <div
             className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row"
@@ -81,13 +80,15 @@ const Header = () => {
               fontFamily: "footerFont, sans-serif",
             }}
           >
-            {navigation.map((item) => (
+            {navigation?.map((item) => (
               <Link
                 key={item.id}
                 to={item.url}
                 onClick={handleClick}
                 className={`block mt-0 relative font-code text-2xl uppercase ${
-                  isRootPath
+                  openNavigation
+                    ? "text-black"
+                    : isRootPath
                     ? scrolled
                       ? "text-black"
                       : "text-white"
@@ -103,7 +104,7 @@ const Header = () => {
             ))}
           </div>
 
-          <HamburgerMenu />
+          {/* <HamburgerMenu /> */}
         </nav>
 
         {token ? (
@@ -151,7 +152,7 @@ const Header = () => {
                   : "text-black"
               }`}
               style={{
-                fontFamily: "footerFont, sans-serif", // Apply the custom font here
+                fontFamily: "footerFont, sans-serif",
               }}
             >
               SIGN IN
@@ -165,11 +166,9 @@ const Header = () => {
           </span>
           <CiShoppingCart
             className={`ml-6 ${
-              isRootPath
-                ? scrolled
-                  ? "text-black"
-                  : "text-white"
-                : "text-black"
+              openNavigation || !isRootPath || scrolled
+                ? "text-black"
+                : "text-white"
             }`}
             size={30}
           />
@@ -190,7 +189,7 @@ const Header = () => {
         )}
 
         <Button
-          className="ml-auto lg:hidden"
+          className="ml-auto lg:hidden bg-blue-600 -mt-[.1rem]"
           px="px-3"
           onClick={toggleNavigation}
         >
