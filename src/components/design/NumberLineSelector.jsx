@@ -73,11 +73,7 @@ const NumberLineSelector = () => {
       <div className="relative">
         {/* Water Bottle Image */}
         <div className="absolute -right-2 -top-32 z-9999">
-          <img
-            src="/src/assets/waterbottle-min.png"
-            alt="Water Bottle"
-            className="w-32"
-          />
+          <img src="/waterbottle-min.png" alt="Water Bottle" className="w-32" />
         </div>
 
         {/* Number Selector Panel */}
@@ -176,8 +172,8 @@ const NumberLineSelector = () => {
         {/* Success Message */}
         {showSuccess && (
           <div className="mt-4 p-4 rounded-lg bg-green-50 border border-green-200 text-green-800">
-            {quantity} Ticket {quantity > 1 ? "s" : ""} successfully added
-            to cart!
+            {quantity} Ticket {quantity > 1 ? "s" : ""} successfully added to
+            cart!
           </div>
         )}
       </div>
