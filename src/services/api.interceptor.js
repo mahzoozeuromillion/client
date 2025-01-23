@@ -2,9 +2,9 @@ import axios from "axios";
 
 // const BASE_URL = "https://tiktik.ap-southeast-2.elasticbeanstalk.com";
 // const BASE_URL = "https://api.talkiyo.xyz";
-const BASE_URL = "http://127.0.0.1:3001/api/web";
+// const BASE_URL = "http://127.0.0.1:3001/api/web";
 
-// const BASE_URL = "https://mahzooz-api.onrender.com/api/web";
+const BASE_URL = "https://apis-rnho.onrender.com/api/web";
 
 const api = axios.create({
   baseURL: BASE_URL,
