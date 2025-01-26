@@ -73,7 +73,7 @@ const NumberLineSelector = () => {
       <div className="relative">
         {/* Water Bottle Image */}
         <div className="absolute -right-2 -top-32 z-9999">
-          <img src="/waterbottle-min.png" alt="Water Bottle" className="w-32" />
+          <img src="/waterbottle-min.jpg" alt="Water Bottle" className="w-32" />
         </div>
 
         {/* Number Selector Panel */}
